@@ -6,10 +6,10 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "nodemon",
-    "build:dev": "npm-run-all clean transpile start",
+    "build:dev": "npm-run-all transpile start",
     "build:prod": "npm-run-all clean transpile",
     "clean": "rimraf ./dist",
-    "transpile": "babel ./src --out-dir ./dist"
+    "transpile": "babel-changed --src ./src --dest ./dist"
   },
   "keywords": [],
   "author": "",
@@ -34,5 +34,8 @@
       "src/*"
     ],
     "ignore": []
+  },
+  "devDependencies": {
+    "@smpx/babel-changed": "^0.3.0"
   }
 }
