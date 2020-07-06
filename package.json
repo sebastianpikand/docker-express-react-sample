@@ -1,0 +1,23 @@
+{
+  "name": "docker-express-react-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "docker-compose up",
+    "start:dev": "docker-compose -f docker-compose-dev.yml up",
+    "docker:build": "docker-compose build",
+    "docker:build:dev": "docker-compose -f docker-compose-dev.yml build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianpikand/docker-express-react-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastianpikand/docker-express-react-sample/issues"
+  },
+  "homepage": "https://github.com/sebastianpikand/docker-express-react-sample#readme"
+}

@@ -1,10 +1,14 @@
-const express = require("express");
+import express from "express";
 
 const app = express();
 
 app.use(express.json());
 
 app.get("/", (req, res) => {
+  res.json({ version: "1.0" });
+});
+
+app.get("/api", (req, res) => {
   res.json({ message: "Hi" });
 });
 

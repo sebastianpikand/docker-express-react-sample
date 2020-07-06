@@ -4,14 +4,14 @@ services:
     restart: always
     build:
       context: ./api
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - "5000:5000"
     volumes:
       - /app/node_modules
       - ./api:/app
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
 
   client:
     restart: always
@@ -19,7 +19,7 @@ services:
       - api
     build:
       context: ./client
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
