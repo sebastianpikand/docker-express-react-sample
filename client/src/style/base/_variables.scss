@@ -1,0 +1,207 @@
+// Descriptive color variables
+
+$light-theme-primary-background: #ffffff;
+$light-theme-secondary-background: #fbf8ff;
+// $light-theme-disabled-gray: #eeeeee;
+$light-theme-primary-gray: #6d6d6d;
+$light-theme-secondary-gray: #dadada;
+
+$dark-theme-primary-background: #151519;
+$dark-theme-secondary-background: #1d1c21;
+// $dark-theme-disabled-gray: #eeeeee;
+$dark-theme-primary-gray: #f9f9f9;
+$dark-theme-secondary-gray: #3c3b41;
+
+$themes: (
+  light: (
+    primary-background-color: $light-theme-primary-background,
+    secondary-background-color: $light-theme-secondary-background,
+    inverse-primary-background-color: $dark-theme-primary-background,
+    inverse-secondary-background-color: $dark-theme-secondary-background,
+    primary-text-color: $light-theme-primary-gray,
+    secondary-text-color: $light-theme-secondary-gray,
+    inverse-primary-text-color: $dark-theme-primary-gray,
+    // button-text-color: #408bbd,
+      // button-text-hover-color: #61b0e7,
+      // button-color: #fff,
+      // button-border: 2px solid #fff,
+  ),
+  dark: (
+    primary-background-color: $dark-theme-primary-background,
+    secondary-background-color: $dark-theme-secondary-background,
+    inverse-primary-background-color: $light-theme-primary-background,
+    inverse-secondary-background-color: $light-theme-secondary-background,
+    primary-text-color: $dark-theme-primary-gray,
+    secondary-text-color: $dark-theme-secondary-gray,
+    inverse-primary-text-color: $light-theme-primary-gray,
+    // button-text-color: #aaa,
+      // button-text-hover-color: #ddd,
+      // button-color: #333,
+      // button-border: 1px solid #aaa,
+  ),
+);
+
+//
+
+$blue: #249cd0;
+// $dark-blue: #0376e3;
+
+$red: #fd6666;
+// $dark-red: #d92c5a;
+
+$green: #69ec83;
+// $dark-green: #63b601;
+
+$orange: #ff6e00;
+// $dark-orange: #d98900;
+
+// $all-colors: (
+//   background-gray: $background-gray,
+//   disabled-gray: $disabled-gray,
+//   light-gray: $light-gray,
+//   gray: $gray,
+//   dark-gray: $dark-gray,
+//   blue: $blue,
+//   dark-blue: $dark-blue,
+//   red: $red,
+//   dark-red: $dark-red,
+//   green: $green,
+//   dark-green: $dark-green,
+//   orange: $orange,
+//   dark-orange: $dark-orange,
+//   aqua: $aqua,
+//   purple: $purple,
+//   yellow: $yellow
+// );
+
+// Functional color variables
+
+$white: #ffffff;
+
+$functional-colors: (
+  primary: (
+    $white,
+    $blue,
+    // $dark-blue
+  ),
+  // secondary: (
+    //   $dark-gray,
+    //   $light-gray,
+    //   $gray
+    // ),
+    success:
+    (
+      $white,
+      $green,
+      // $dark-green
+    ),
+);
+
+// Shadows
+
+$small-shadow: 0 1px 4px 0 rgba(55, 70, 95, 0.12);
+$medium-shadow: 0 8px 16px 0 rgba(55, 70, 95, 0.07);
+$big-shadow: 0 12px 18px 0 rgba(25, 42, 70, 0.13);
+
+// Spacing
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  2: (
+    $spacer * 0.125,
+  ),
+  4: (
+    $spacer * 0.25,
+  ),
+  8: (
+    $spacer * 0.5,
+  ),
+  12: (
+    $spacer * 0.75,
+  ),
+  16: (
+    $spacer,
+  ),
+  24: (
+    $spacer * 1.5,
+  ),
+  32: (
+    $spacer * 2,
+  ),
+  64: (
+    $spacer * 4,
+  ),
+  128: (
+    $spacer * 8,
+  ),
+);
+
+// Fonts
+$font-family-sans-serif: "Roboto", sans-serif;
+$font-family-monospace: "Roboto Mono", monospace;
+
+$font-size-base: 1rem !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5;
+
+$h1-font-size: $font-size-base * 2.375;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.25;
+$h4-font-size: $font-size-base * 0.75;
+
+$body-big-font-size: $font-size-base * 1.125;
+$body-big-line-height: $font-size-base * 1.6875;
+
+$body-regular-font-size: $font-size-base;
+$body-regular-line-height: $font-size-base * 1.5;
+
+$body-small-font-size: $font-size-base * 0.875;
+$body-small-line-height: $font-size-base * 1.325;
+
+$body-tiny-font-size: $font-size-base * 0.625;
+$body-tiny-line-height: $font-size-base * 0.9375;
+
+// Border properties
+
+$border-width: 1px;
+// $hr-border-width: $border-width;
+$button-border-width: $border-width;
+$input-border-width: $border-width;
+
+$border-radius: 4px;
+$btn-border-radius: $border-radius;
+$input-border-radius: $border-radius;
+$tooltip-border-radius: $border-radius;
+$checkbox-border-radius: $border-radius;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$btn-sm-padding-x: 0.5rem;
+$btn-sm-padding-y: 0.25rem;
+$btn-sm-font-size: 0.75rem;
+$btn-sm-line-height: 1.125rem;
+
+$btn-reg-padding-x: 1rem;
+$btn-reg-padding-y: 0.5rem;
+$btn-reg-font-size: 1rem;
+$btn-reg-line-height: 1.5rem;
+
+$btn-lg-padding-x: 2rem;
+$btn-lg-padding-y: 0.5rem;
+$btn-lg-font-size: 1.125rem;
+$btn-lg-line-height: 2rem;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius: $btn-border-radius;
+
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
