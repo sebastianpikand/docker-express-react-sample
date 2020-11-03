@@ -4,10 +4,23 @@
   "description": "",
   "main": "",
   "scripts": {
-    "start": "docker-compose up",
-    "start:dev": "docker-compose -f docker-compose-dev.yml up",
     "docker:build": "docker-compose build",
-    "docker:build:dev": "docker-compose -f docker-compose-dev.yml build"
+    "docker:build:dev": "docker-compose -f docker-compose-dev.yml build",
+    "docker:build:local": "docker-compose -f docker-compose-local.yml build",
+    "start": "docker-compose up",
+    "start:dev": "docker-compose -f docker-compose-dev.yml up --renew-anon-volumes",
+    "start:local": "docker-compose -f docker-compose-local.yml up --renew-anon-volumes",
+    "docker:api:reset:prod": "docker-compose run --rm api npm run db:reset",
+    "docker:api:reset:dev": "docker-compose -f docker-compose-dev.yml run --rm api npm run db:reset",
+    "docker:api:reset:local": "docker-compose -f docker-compose-local.yml run --rm api npm run db:reset",
+    "docker:api:rollback:prod": "docker-compose run --rm api npm run db:rollback",
+    "docker:api:rollback:dev": "docker-compose -f docker-compose-dev.yml run --rm api npm run db:rollback",
+    "docker:api:rollback:local": "docker-compose -f docker-compose-local.yml run --rm api npm run db:rollback",
+    "docker:api:migrate:prod": "docker-compose run --rm api npm run db:migrate",
+    "docker:api:migrate:dev": "docker-compose -f docker-compose-dev.yml run --rm api npm run db:migrate",
+    "docker:api:migrate:local": "docker-compose -f docker-compose-local.yml run --rm api npm run db:migrate",
+    "docker:api:seed:example-table:local": "docker-compose -f docker-compose-local.yml run --rm api npm run seed:example-table",
+    "pg-terminal:local": "docker exec -it db_container psql -U postgres_db postgres_db"
   },
   "repository": {
     "type": "git",

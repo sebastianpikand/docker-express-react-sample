@@ -1,0 +1,41 @@
+version: '3.5'
+services:
+  api:
+    container_name: api_container
+    build:
+      context: ./api
+      dockerfile: Dockerfile.local
+    image: app_name/api_container
+    ports:
+      - '5000:5000'
+    volumes:
+      - /app/node_modules
+      - ./api:/app
+    depends_on:
+      - postgres
+    env_file:
+      - .env.local
+
+  postgres:
+    container_name: db_container
+    image: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_DB=postgres_db
+      - POSTGRES_USER=postgres_db
+      - POSTGRES_PASSWORD=postgres_db
+
+  client:
+    depends_on:
+      - api
+    container_name: client_container
+    build:
+      context: ./client
+      dockerfile: Dockerfile.local
+    image: app_name/client_container
+    ports:
+      - '3000:3000'
+    volumes:
+      - /app/node_modules
+      - ./client:/app
