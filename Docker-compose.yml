@@ -1,27 +1,26 @@
-version: "3.7"
+version: '3'
 services:
   api:
-    restart: always
+    container_name: api_container_prod
     build:
       context: ./api
       dockerfile: Dockerfile
+    image: opiq/dashboard_api
     ports:
-      - "5000:5000"
+      - '5000:5000'
     volumes:
       - /app/node_modules
       - ./api:/app
-    environment:
-      - NODE_ENV=production
+    env_file:
+      - .env.production
 
   client:
-    restart: always
     depends_on:
       - api
+    container_name: client_container_prod
     build:
       context: ./client
       dockerfile: Dockerfile
+    image: opiq/dashboard_client
     ports:
-      - "3000:3000"
-    volumes:
-      - /app/node_modules
-      - ./client:/app
+      - '3000:3000'

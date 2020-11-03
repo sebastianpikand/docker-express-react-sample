@@ -35,9 +35,7 @@ app.use(cors());
 app.use('/api/version', versioningRoutes);
 
 // Catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
-});
+app.use((req, res, next) => next(createError(404)));
 
 // Error handler
 app.use((err, req, res, next) => {

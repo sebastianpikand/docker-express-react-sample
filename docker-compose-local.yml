@@ -1,11 +1,11 @@
 version: '3.5'
 services:
   api:
-    container_name: api_container
+    container_name: api_container_local
     build:
       context: ./api
       dockerfile: Dockerfile.local
-    image: app_name/api_container
+    image: app_name/api_container_local
     ports:
       - '5000:5000'
     volumes:
@@ -29,11 +29,11 @@ services:
   client:
     depends_on:
       - api
-    container_name: client_container
+    container_name: client_container_local
     build:
       context: ./client
       dockerfile: Dockerfile.local
-    image: app_name/client_container
+    image: app_name/client_container_local
     ports:
       - '3000:3000'
     volumes:

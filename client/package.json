@@ -6,6 +6,7 @@
   "scripts": {
     "start": "",
     "local": "webpack-dev-server --open --mode development --display-error-details --env.TARGET_ENV=local",
+    "dev": "webpack-dev-server --open --mode development --display-error-details --env.TARGET_ENV=development",
     "build:prod": "npm-run-all --sequential clean compile:prod --parallel",
     "build:dev": "npm-run-all --sequential clean compile:dev --parallel",
     "compile:prod": "webpack --env.TARGET_ENV=production",
