@@ -1,0 +1,51 @@
+.checkboxWrapper {
+  line-height: 0;
+  &__checkbox {
+    color: $dark-gray;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover:not(&__checked) {
+      & > div {
+        background-color: $very-light-gray;
+      }
+    }
+
+    &__checked {
+      & > div {
+        background-color: $very-light-gray;
+      }
+    }
+
+    &__input {
+      input[type='checkbox']:checked,
+      input[type='checkbox']:not(:checked) {
+        display: none;
+      }
+    }
+
+    &__tickbox {
+      display: flex;
+      align-items: center;
+      width: 18px;
+      height: 18px;
+      border: $border-width-medium solid $light-gray;
+      border-radius: $border-radius-regular;
+      margin-right: map-get($spacers, 8);
+      transition: all 0.2s ease-out;
+
+      // position: relative;
+
+      // & > svg {
+      //   top: 1px;
+      //   left: 1px;
+      //   position: absolute;
+      // }
+    }
+
+    &__paragraph {
+      margin: 0;
+    }
+  }
+}

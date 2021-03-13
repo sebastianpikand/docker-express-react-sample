@@ -1,0 +1,32 @@
+@each $spacing, $value in $spacers {
+  .m-#{$spacing}.m-#{$spacing} {
+    margin: $value;
+  }
+  .mt-#{$spacing}.mt-#{$spacing} {
+    margin-top: $value;
+  }
+  .mr-#{$spacing}.mr-#{$spacing} {
+    margin-right: $value;
+  }
+  .mb-#{$spacing}.mb-#{$spacing} {
+    margin-bottom: $value;
+  }
+  .ml-#{$spacing}.ml-#{$spacing} {
+    margin-left: $value;
+  }
+  .p-#{$spacing}.p-#{$spacing} {
+    padding: $value;
+  }
+  .pt-#{$spacing}.pt-#{$spacing} {
+    padding-top: $value;
+  }
+  .pr-#{$spacing}.pr-#{$spacing} {
+    padding-right: $value;
+  }
+  .pb-#{$spacing}.pb-#{$spacing} {
+    padding-bottom: $value;
+  }
+  .pl-#{$spacing}.pl-#{$spacing} {
+    padding-left: $value;
+  }
+}

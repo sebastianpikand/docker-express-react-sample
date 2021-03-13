@@ -1,0 +1,36 @@
+$input-border-width: 2px;
+$input-border-radius: 6px;
+
+$input-border-style__regular: $input-border-width solid $very-light-gray;
+$input-border-style__error: $input-border-width solid $signal-red;
+$input-border-style__hover: $input-border-width solid $light-gray;
+$input-border-style__focus: $input-border-width solid $brand-purple;
+
+@mixin inputBase() {
+  transition: border-color 0.2s ease-out;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  border: $input-border-style__regular;
+  border-radius: $input-border-radius;
+  box-sizing: border-box;
+  outline: none;
+  color: $dark-gray;
+  font-weight: 400;
+  padding: map-get($spacers, 8) map-get($spacers, 12);
+  margin: 0;
+  text-overflow: ellipsis;
+
+  &.error {
+    border: $input-border-style__error;
+  }
+  &:hover {
+    border: $input-border-style__hover;
+  }
+  &:focus {
+    border: $input-border-style__focus;
+  }
+  &::placeholder {
+    color: $gray;
+  }
+}

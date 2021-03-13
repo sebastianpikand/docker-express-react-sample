@@ -1,0 +1,60 @@
+.popupModalWrapper {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: linear-gradient(135deg, rgba(79, 70, 182, 0.2) 0%, rgba(83, 189, 247, 0.2) 100%);
+  align-items: center;
+  justify-content: flex-start;
+  &__modal {
+    width: 600px;
+    margin-top: 10%;
+    padding: map-get($spacers, 24) 0;
+    border: 1px solid $very-light-gray;
+    border-radius: $border-radius-medium;
+    box-shadow: $big-shadow;
+    background: $white;
+
+    &__contentWrapper {
+      padding: 0 map-get($spacers, 24);
+
+      // header
+      &:first-child {
+        border-bottom: 1px solid $very-light-gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: map-get($spacers, 24);
+      }
+
+      &__title {
+        font-weight: 600;
+        margin: 0;
+      }
+
+      &__closeButton {
+        display: inline-flex;
+        border-radius: 50%;
+        background: $highlight-bordered-bg;
+        border: $highlight-bordered-border;
+        padding: map-get($spacers, 8);
+        cursor: pointer;
+
+        & > span {
+          color: $dark-gray;
+          font-size: 18px;
+        }
+      }
+
+      // body
+      &:last-child {
+        padding-top: map-get($spacers, 24);
+      }
+    }
+  }
+}

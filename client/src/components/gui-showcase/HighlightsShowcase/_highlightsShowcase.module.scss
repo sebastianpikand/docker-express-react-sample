@@ -1,0 +1,20 @@
+.highlight {
+  width: $spacer * 7.25;
+  height: $spacer * 6;
+  border-radius: $border-radius-small;
+
+  &__light {
+    background: $highlight-regular-bg;
+  }
+  &__regular {
+    background: $highlight-regular-bg;
+  }
+  &__bordered {
+    background: $highlight-bordered-bg;
+    border: $highlight-bordered-border;
+  }
+  &__active {
+    background: $highlight-active-bg;
+    border: $highlight-active-border;
+  }
+}

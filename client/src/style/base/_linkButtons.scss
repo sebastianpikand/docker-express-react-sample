@@ -1,0 +1,66 @@
+@mixin link-button-size($padding-y, $padding-x, $font-size, $line-height) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+.linkBtn {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  outline: 0;
+  box-shadow: none;
+  border-radius: $border-radius-medium;
+  .right-icon {
+    margin-left: map-get($spacers, 8);
+  }
+
+  // reset outlines
+
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &-reg {
+    @include link-button-size($btn-reg-padding-y, $btn-reg-padding-x, $btn-reg-font-size, $btn-reg-line-height);
+    & + & {
+      margin-left: $spacer;
+    }
+  }
+
+  // block style buttons for mobile and tablet viewport
+  &-block {
+    display: block;
+    width: 100%;
+    margin-left: 0 !important;
+    & + & {
+      margin-top: $spacer;
+    }
+  }
+}
+
+// color classes
+
+@each $value, $color in $button-colors {
+  .linkBtn-#{$value} {
+    color: nth($color, 1);
+    background-image: nth($color, 2);
+    box-shadow: nth($color, 3);
+    border: none;
+    transition: all 0.2s ease-out;
+    &:hover {
+      background-image: nth($color, 4);
+      box-shadow: nth($color, 5);
+    }
+    &:active {
+      background-image: nth($color, 6);
+      box-shadow: nth($color, 7);
+    }
+  }
+}

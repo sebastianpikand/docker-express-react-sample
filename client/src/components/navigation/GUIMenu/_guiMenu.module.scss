@@ -1,0 +1,34 @@
+.guiMenuWrapper {
+  font-size: $h5-font-size;
+  padding: $spacer;
+  background-color: $white;
+  box-shadow: $medium-shadow;
+  border-radius: $border-radius-medium;
+  width: 230px;
+  &__menuElement {
+    padding: $spacer * 0.5 $spacer;
+    border-radius: $border-radius-big;
+    text-decoration: none;
+    color: $gray;
+    display: block;
+    border: 1px solid $white;
+    transition: all 0.15s ease-out;
+    &:visited {
+      color: $gray;
+    }
+    &:hover {
+      background: $highlight-regular-bg;
+      color: $dark-gray;
+    }
+    &__active {
+      color: $brand-purple;
+      border: $highlight-active-border;
+      &:visited {
+        color: $brand-purple;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: $spacer * 0.5;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@mixin inputBodySizing($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+  &::placeholder {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}

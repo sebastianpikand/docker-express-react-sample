@@ -1,0 +1,20 @@
+.showcase-display-section {
+  &:not(:last-child) {
+    padding-bottom: map-get($spacers, 32);
+    border-bottom: 1px solid $very-light-gray;
+    margin-bottom: map-get($spacers, 32);
+  }
+}
+
+.styles-row {
+  &__style-wrapper {
+    overflow-wrap: break-word;
+    display: inline-block;
+    border-radius: $border-radius-medium;
+    padding: $spacer;
+    border: 1px solid $very-light-gray;
+    & + & {
+      margin-left: $spacer * 2;
+    }
+  }
+}

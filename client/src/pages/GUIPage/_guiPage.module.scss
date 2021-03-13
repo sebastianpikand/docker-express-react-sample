@@ -1,0 +1,12 @@
+.showcaseWrapper {
+  display: flex;
+}
+
+.showcaseContainer {
+  width: 100%;
+  margin-left: map-get($spacers, 24);
+  padding: map-get($spacers, 24);
+  background-color: $white;
+  box-shadow: $medium-shadow;
+  border-radius: $border-radius-medium;
+}

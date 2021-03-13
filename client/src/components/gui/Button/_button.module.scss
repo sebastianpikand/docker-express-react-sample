@@ -1,0 +1,117 @@
+// mixin for button size generation
+
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// base styles
+
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  outline: 0;
+  box-shadow: none;
+  border-radius: $border-radius-medium;
+
+  &__rightIcon {
+    margin-left: map-get($spacers, 8);
+  }
+
+  // reset outlines
+
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  // small buttons generated using a mixin
+
+  // &-sm {
+  //   @include button-size(
+  //     $btn-sm-padding-y,
+  //     $btn-sm-padding-x,
+  //     $btn-sm-font-size,
+  //     $btn-sm-line-height
+  //   );
+  //   & + & {
+  //     margin-left: map-get($spacers, 8);
+  //   }
+  // }
+
+  // reg buttons generated using a mixin
+
+  &-reg {
+    @include button-size($btn-reg-padding-y, $btn-reg-padding-x, $btn-reg-font-size, $btn-reg-line-height);
+    & + & {
+      margin-left: $spacer;
+    }
+
+    .buttonIcon {
+      font-size: 18px;
+    }
+  }
+
+  // large buttons generated using a mixin
+
+  // &-lg {
+  //   @include button-size(
+  //     $btn-lg-padding-y,
+  //     $btn-lg-padding-x,
+  //     $btn-lg-font-size,
+  //     $btn-lg-line-height
+  //   );
+  //   & + & {
+  //     margin-left: map-get($spacers, 32);
+  //   }
+  // }
+
+  // block style buttons for mobile and tablet viewport
+  &-block {
+    display: block;
+    width: 100%;
+    margin-left: 0 !important;
+    & + & {
+      margin-top: $spacer;
+    }
+  }
+}
+
+// disabled
+button:disabled {
+  cursor: not-allowed;
+  background: $disabled-gray;
+  color: $dark-gray;
+  &:hover {
+    cursor: not-allowed;
+    background: $disabled-gray;
+    color: $dark-gray;
+  }
+}
+
+// color classes
+
+@each $value, $color in $button-colors {
+  .btn-#{$value} {
+    color: nth($color, 1);
+    background: nth($color, 2);
+    box-shadow: nth($color, 3);
+    border: none;
+    transition: $transition-reg;
+    &:hover {
+      background: nth($color, 4);
+      box-shadow: nth($color, 5);
+    }
+    &:active {
+      background: nth($color, 6);
+      box-shadow: nth($color, 7);
+    }
+  }
+}

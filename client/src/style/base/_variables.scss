@@ -1,109 +1,101 @@
-// Descriptive color variables
-
-$light-theme-primary-background: #ffffff;
-$light-theme-secondary-background: #fbf8ff;
-// $light-theme-disabled-gray: #eeeeee;
-$light-theme-primary-gray: #6d6d6d;
-$light-theme-secondary-gray: #dadada;
-
-$dark-theme-primary-background: #151519;
-$dark-theme-secondary-background: #1d1c21;
-// $dark-theme-disabled-gray: #eeeeee;
-$dark-theme-primary-gray: #f9f9f9;
-$dark-theme-secondary-gray: #3c3b41;
-
-$themes: (
-  light: (
-    primary-background-color: $light-theme-primary-background,
-    secondary-background-color: $light-theme-secondary-background,
-    inverse-primary-background-color: $dark-theme-primary-background,
-    inverse-secondary-background-color: $dark-theme-secondary-background,
-    primary-text-color: $light-theme-primary-gray,
-    secondary-text-color: $light-theme-secondary-gray,
-    inverse-primary-text-color: $dark-theme-primary-gray,
-    // button-text-color: #408bbd,
-      // button-text-hover-color: #61b0e7,
-      // button-color: #fff,
-      // button-border: 2px solid #fff,
-  ),
-  dark: (
-    primary-background-color: $dark-theme-primary-background,
-    secondary-background-color: $dark-theme-secondary-background,
-    inverse-primary-background-color: $light-theme-primary-background,
-    inverse-secondary-background-color: $light-theme-secondary-background,
-    primary-text-color: $dark-theme-primary-gray,
-    secondary-text-color: $dark-theme-secondary-gray,
-    inverse-primary-text-color: $light-theme-primary-gray,
-    // button-text-color: #aaa,
-      // button-text-hover-color: #ddd,
-      // button-color: #333,
-      // button-border: 1px solid #aaa,
-  ),
-);
-
-//
-
-$blue: #249cd0;
-// $dark-blue: #0376e3;
-
-$red: #fd6666;
-// $dark-red: #d92c5a;
-
-$green: #69ec83;
-// $dark-green: #63b601;
-
-$orange: #ff6e00;
-// $dark-orange: #d98900;
-
-// $all-colors: (
-//   background-gray: $background-gray,
-//   disabled-gray: $disabled-gray,
-//   light-gray: $light-gray,
-//   gray: $gray,
-//   dark-gray: $dark-gray,
-//   blue: $blue,
-//   dark-blue: $dark-blue,
-//   red: $red,
-//   dark-red: $dark-red,
-//   green: $green,
-//   dark-green: $dark-green,
-//   orange: $orange,
-//   dark-orange: $dark-orange,
-//   aqua: $aqua,
-//   purple: $purple,
-//   yellow: $yellow
-// );
-
-// Functional color variables
+// grays
 
 $white: #ffffff;
+$disabled-gray: #ced4e2;
+$very-light-gray: #eff1ff;
+$light-gray: #dde1fc;
+$gray: #71758e;
+$dark-gray: #2f334f;
 
-$functional-colors: (
+// brand colors
+
+$brand-purple: #4f46b6;
+$light-brand-purple: #dcdaf0;
+$brand-blue: #53bdf7;
+$light-brand-blue: #cbebfc;
+
+// signal colors
+
+$signal-red: #ff4a7a;
+$signal-green: #3bb577;
+$signal-orange: #f9aa01;
+
+// primary button styles
+
+$primary-button-bg-regular: linear-gradient(180deg, #665bdd 0%, #4f46b6 100%);
+$primary-button-shadow-regular: 0 1px 4px 0 rgba(79, 70, 182, 0.2);
+
+$primary-button-bg-hover: linear-gradient(180deg, #665bdd 0%, #4f46b6 100%);
+$primary-button-shadow-hover: 0 3px 12px 0 rgba(79, 70, 182, 0.25);
+
+$primary-button-bg-active: linear-gradient(180deg, #6055d5 0%, #4f46b6 100%);
+$primary-button-shadow-active: 0 1px 4px 0 rgba(79, 70, 182, 0.2);
+
+// secondary button styles
+
+$secondary-button-bg-regular: linear-gradient(180deg, #eff1ff 0%, #e3e6fa 100%);
+$secondary-button-shadow-regular: 0 1px 1px 0 #eff1ff;
+
+$secondary-button-bg-hover: linear-gradient(180deg, #eff1ff 0%, #e3e6fa 100%);
+$secondary-button-shadow-hover: 0 3px 12px 0 #ebedfb;
+
+$secondary-button-bg-active: linear-gradient(180deg, #eff1ff 0%, #e3e6fa 100%);
+$secondary-button-shadow-active: 0 0 1px 0 #eff1ff;
+
+// button colors
+$button-colors: (
   primary: (
     $white,
-    $blue,
-    // $dark-blue
+    $primary-button-bg-regular,
+    $primary-button-shadow-regular,
+    $primary-button-bg-hover,
+    $primary-button-shadow-hover,
+    $primary-button-bg-active,
+    $primary-button-shadow-active,
   ),
-  // secondary: (
-    //   $dark-gray,
-    //   $light-gray,
-    //   $gray
-    // ),
-    success:
-    (
-      $white,
-      $green,
-      // $dark-green
-    ),
+  secondary: (
+    $dark-gray,
+    $secondary-button-bg-regular,
+    $secondary-button-shadow-regular,
+    $secondary-button-bg-hover,
+    $secondary-button-shadow-hover,
+    $secondary-button-bg-active,
+    $secondary-button-shadow-active,
+  ),
 );
 
-// Shadows
+$all-colors: (
+  white: $white,
+  disabled-gray: $disabled-gray,
+  very-light-gray: $very-light-gray,
+  light-gray: $light-gray,
+  gray: $gray,
+  dark-gray: $dark-gray,
+  brand-purple: $brand-purple,
+  light-brand-purple: $light-brand-purple,
+  brand-blue: $brand-blue,
+  light-brand-blue: $light-brand-blue,
+  signal-red: $signal-red,
+  signal-green: $signal-green,
+  signal-orange: $signal-orange,
+);
 
-$small-shadow: 0 1px 4px 0 rgba(55, 70, 95, 0.12);
+// gradients
+
+$bg-gradient: linear-gradient(135deg, #f8fcff 0%, #fffafa 100%);
+
+// shadows
+
+$flat-shadow: 0 0 0 0 rgba(55, 70, 95, 0);
+$small-shadow: 0 1px 4px 0 rgba(55, 70, 95, 0.06);
 $medium-shadow: 0 8px 16px 0 rgba(55, 70, 95, 0.07);
 $big-shadow: 0 12px 18px 0 rgba(25, 42, 70, 0.13);
 
-// Spacing
+// general container settings
+
+$container-max-width: 1150px;
+
+// spacing
 
 $spacer: 1rem !default;
 $spacers: (
@@ -114,8 +106,14 @@ $spacers: (
   4: (
     $spacer * 0.25,
   ),
+  6: (
+    $spacer * 0.375,
+  ),
   8: (
     $spacer * 0.5,
+  ),
+  10: (
+    $spacer * 0.625,
   ),
   12: (
     $spacer * 0.75,
@@ -129,6 +127,9 @@ $spacers: (
   32: (
     $spacer * 2,
   ),
+  48: (
+    $spacer * 3,
+  ),
   64: (
     $spacer * 4,
   ),
@@ -137,71 +138,87 @@ $spacers: (
   ),
 );
 
-// Fonts
-$font-family-sans-serif: "Roboto", sans-serif;
-$font-family-monospace: "Roboto Mono", monospace;
+// fonts
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
 
 $font-size-base: 1rem !default;
 
-$font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-medium: 500 !default;
+$font-weight-regular: 400 !default;
+$font-weight-semi-bold: 600 !default;
 $font-weight-bold: 700 !default;
 
-$font-weight-base: $font-weight-normal !default;
+$font-weight-base: $font-weight-regular !default;
 $line-height-base: 1.5;
 
 $h1-font-size: $font-size-base * 2.375;
+$h1-line-height: $font-size-base * 3.625;
+
 $h2-font-size: $font-size-base * 2;
+$h2-line-height: $font-size-base * 3;
+
 $h3-font-size: $font-size-base * 1.25;
-$h4-font-size: $font-size-base * 0.75;
+$h3-line-height: $font-size-base * 1.875;
+
+$h4-font-size: $font-size-base * 1;
+$h4-line-height: $font-size-base * 1.5;
+
+$h5-font-size: $font-size-base * 0.75;
+$h5-line-height: $font-size-base * 1;
 
 $body-big-font-size: $font-size-base * 1.125;
-$body-big-line-height: $font-size-base * 1.6875;
+$body-big-line-height: $font-size-base * 2;
 
 $body-regular-font-size: $font-size-base;
 $body-regular-line-height: $font-size-base * 1.5;
 
-$body-small-font-size: $font-size-base * 0.875;
-$body-small-line-height: $font-size-base * 1.325;
+$body-small-font-size: $font-size-base * 0.75;
+$body-small-line-height: $font-size-base * 1.125;
 
 $body-tiny-font-size: $font-size-base * 0.625;
-$body-tiny-line-height: $font-size-base * 0.9375;
+$body-tiny-line-height: $font-size-base * 1;
 
-// Border properties
+// border properties
 
-$border-width: 1px;
-// $hr-border-width: $border-width;
-$button-border-width: $border-width;
-$input-border-width: $border-width;
+$border-width-regular: 1px;
+$border-width-medium: 2px;
+$border-width-large: 4px;
 
-$border-radius: 4px;
-$btn-border-radius: $border-radius;
-$input-border-radius: $border-radius;
-$tooltip-border-radius: $border-radius;
-$checkbox-border-radius: $border-radius;
+$border-radius-small: 2px;
+$border-radius-regular: 4px;
+$border-radius-reg: 4px;
+$border-radius-medium: 6px;
+$border-radius-med: 6px;
+$border-radius-md: 6px;
+$border-radius-big: 8px;
 
-// Buttons + Forms
-//
-// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
-
-$btn-sm-padding-x: 0.5rem;
-$btn-sm-padding-y: 0.25rem;
-$btn-sm-font-size: 0.75rem;
-$btn-sm-line-height: 1.125rem;
+// $btn-sm-padding-x: 0.5rem;
+// $btn-sm-padding-y: 0.25rem;
+// $btn-sm-font-size: 0.75rem;
+// $btn-sm-line-height: 1.125rem;
 
 $btn-reg-padding-x: 1rem;
 $btn-reg-padding-y: 0.5rem;
 $btn-reg-font-size: 1rem;
 $btn-reg-line-height: 1.5rem;
 
-$btn-lg-padding-x: 2rem;
-$btn-lg-padding-y: 0.5rem;
-$btn-lg-font-size: 1.125rem;
-$btn-lg-line-height: 2rem;
+// $btn-lg-padding-x: 2rem;
+// $btn-lg-padding-y: 0.5rem;
+// $btn-lg-font-size: 1.125rem;
+// $btn-lg-line-height: 2rem;
 
-// Allows for customizing button radius independently from global border radius
-$btn-border-radius: $btn-border-radius;
+$transition-reg: all 0.15s ease-out;
 
-$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$transition-btn: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out !default;
+
+// highlights
+
+$highlight-light-bg: rgba(246, 247, 255, 0.25);
+$highlight-regular-bg: rgba(246, 247, 255, 0.5);
+
+$highlight-bordered-bg: rgba(246, 247, 255, 0.5);
+$highlight-bordered-border: 1px solid $very-light-gray;
+
+$highlight-active-bg: rgba(245, 245, 255, 0.3);
+$highlight-active-border: 1px solid rgba(79, 70, 182, 0.35);

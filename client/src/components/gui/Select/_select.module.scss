@@ -1,0 +1,71 @@
+$input-label-font-size__sm: 14px;
+$input-label-line-height__sm: 14px;
+$input-body-font-size__sm: 16px;
+$input-body-line-height__sm: 16px;
+
+$input-label-font-size__reg: $font-size-base * 0.875;
+$input-label-line-height__reg: $font-size-base * 1.25;
+$input-body-font-size__reg: $body-regular-font-size;
+$input-body-line-height__reg: $body-regular-line-height;
+
+$input-label-font-size__lg: $body-big-font-size;
+$input-label-line-height__lg: $body-big-line-height;
+$input-body-font-size__lg: $body-big-font-size;
+$input-body-line-height__lg: $body-big-line-height;
+
+.selectInputWrapper {
+  position: relative;
+
+  &__selectInputLabel {
+    color: $dark-gray;
+    margin-bottom: map-get($spacers, 8);
+    display: block;
+
+    &__lg {
+      @include inputLabelSizing($input-label-font-size__lg, $input-label-line-height__lg);
+    }
+    &__reg {
+      @include inputLabelSizing($input-label-font-size__reg, $input-label-line-height__reg);
+    }
+    &__sm {
+      @include inputLabelSizing($input-label-font-size__sm, $input-label-line-height__sm);
+    }
+  }
+
+  &__selectInputBody {
+    @include inputBase();
+
+    padding: map-get($spacers, 8) map-get($spacers, 32) map-get($spacers, 8) map-get($spacers, 12);
+
+    &__lg {
+      @include inputBodySizing($input-body-font-size__lg, $input-body-line-height__lg);
+      background-size: 18px;
+    }
+    &__reg {
+      @include inputBodySizing($input-body-font-size__reg, $input-body-line-height__reg);
+      background-size: 16px;
+    }
+    &__sm {
+      @include inputBodySizing($input-body-font-size__sm, $input-body-line-height__sm);
+      background-size: 15px;
+    }
+  }
+
+  &__caret {
+    background: url('/assets/icons/gui-icons/chevron-down.svg') no-repeat right center;
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 8px;
+    pointer-events: none;
+
+    &__iconPosWithLabel {
+      top: 38px;
+    }
+
+    &__iconPosWithoutLabel {
+      top: 10px;
+    }
+  }
+}

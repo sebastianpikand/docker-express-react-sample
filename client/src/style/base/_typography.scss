@@ -1,0 +1,121 @@
+// headings
+
+h1,
+.h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  font-weight: $font-weight-bold;
+  margin: $spacer * 2 0 $spacer;
+  color: $dark-gray;
+}
+
+h2,
+.h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  font-weight: $font-weight-regular;
+  color: $dark-gray;
+  margin: $spacer * 2 0 $spacer;
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  font-weight: $font-weight-regular;
+  color: $dark-gray;
+  margin: $spacer 0;
+}
+
+h4,
+.h4 {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  text-transform: uppercase;
+  color: $dark-gray;
+  font-weight: $font-weight-bold;
+  margin: $spacer 0;
+}
+
+h5,
+.h5 {
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;
+  text-transform: uppercase;
+  color: $dark-gray;
+  font-weight: $font-weight-semi-bold;
+  margin: $spacer 0;
+}
+
+p {
+  color: $dark-gray;
+}
+
+.body-big {
+  font-size: $body-big-font-size;
+  line-height: $body-big-line-height;
+  margin: $spacer 0;
+  color: $dark-gray;
+}
+
+.body-regular {
+  font-size: $body-regular-font-size;
+  line-height: $body-regular-line-height;
+  margin: $spacer 0;
+  color: $dark-gray;
+}
+
+.body-small {
+  font-size: $body-small-font-size;
+  line-height: $body-small-line-height;
+  margin: $spacer 0;
+  color: $dark-gray;
+}
+
+.body-tiny {
+  font-size: $body-tiny-font-size;
+  line-height: $body-tiny-line-height;
+  margin: $spacer 0;
+  color: $dark-gray;
+}
+
+// text-colors
+
+@each $value, $color in $all-colors {
+  .#{$value}-text {
+    color: $color;
+  }
+}
+
+// alignment
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.link-regular {
+  color: $brand-purple;
+  text-decoration: underline;
+  &:visited {
+    color: $brand-purple;
+  }
+}
+
+.link-flushed {
+  color: $gray;
+  text-decoration: underline;
+  &:visited {
+    color: $gray;
+  }
+  &:hover {
+    color: $brand-purple;
+  }
+}

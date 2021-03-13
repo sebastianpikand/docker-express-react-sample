@@ -1,0 +1,44 @@
+.color {
+  width: $spacer * 7.25;
+  height: $spacer * 6;
+
+  &__brandPurple {
+    background-color: $brand-purple;
+  }
+  &__lightBrandPurple {
+    background-color: $light-brand-purple;
+  }
+
+  &__lightBrandBlue {
+    background-color: $light-brand-blue;
+  }
+  &__brandBlue {
+    background-color: $brand-blue;
+  }
+
+  &__signalRed {
+    background-color: $signal-red;
+  }
+  &__signalOrange {
+    background-color: $signal-orange;
+  }
+  &__signalGreen {
+    background-color: $signal-green;
+  }
+
+  &__darkGray {
+    background-color: $dark-gray;
+  }
+  &__gray {
+    background-color: $gray;
+  }
+  &__lightGray {
+    background-color: $light-gray;
+  }
+  &__veryLightGray {
+    background-color: $very-light-gray;
+  }
+  &__disabledUIGray {
+    background-color: $disabled-gray;
+  }
+}
